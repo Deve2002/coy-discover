@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Discover from "./Discover";
 
 type TabId = "home" | "discover";
 
@@ -33,9 +34,7 @@ export default function TabShell() {
     <div className="app">
       <main className="screen" role="tabpanel" aria-label={active}>
         {active === "home" && null /* Home stays blank by design */}
-        {active === "discover" && (
-          <div className="placeholder">Discover is coming in the next phase.</div>
-        )}
+        {active === "discover" && <Discover />}
       </main>
 
       <nav className="tabbar" role="tablist" aria-label="Main">
